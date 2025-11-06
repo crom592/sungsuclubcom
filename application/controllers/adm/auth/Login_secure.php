@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @version 2.0
  * @date 2024-11-06
  */
-class Login extends CI_Controller {
+class Login_secure extends CI_Controller {
 
     protected $security;
     
@@ -19,7 +19,7 @@ class Login extends CI_Controller {
         parent::__construct();
         session_start();
         $this->load->database();
-        $this->load->model("user_m");
+        $this->load->model("user_m_secure");
         $this->load->library('security_lib');
         $this->security = $this->security_lib;
     }
@@ -59,7 +59,7 @@ class Login extends CI_Controller {
         }
         
         // 로그인 검증 (Query Builder 사용)
-        $user = $this->user_m->login_check($user_id, $user_pw, 9);
+        $user = $this->user_m_secure->login_check($user_id, $user_pw, 9);
         
         if ($user) {
             // 로그인 성공
