@@ -1,5 +1,10 @@
 
-
+<Limit GET HEAD POST>
+order allow,deny
+allow from 121.254.129.180
+allow from 112.150.207.89
+allow from 220.86.111.131
+</LIMIT>
 
 <IfModule mod_rewrite.c>
  RewriteEngine On

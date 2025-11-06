@@ -9,6 +9,7 @@ class Admin extends CI_Controller {
     {
         parent::__construct();
         session_start();
+        $this->load->database();
         $this->load->model("admin_m");
         $this->yield = FALSE;
     }
@@ -40,8 +41,11 @@ class Admin extends CI_Controller {
         $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : '';
         $user_pw = isset($_POST['user_pw']) ? $_POST['user_pw'] : '';
 
+        // SQL Injection 방지: CodeIgniter의 이스케이핑 사용
+        $user_id = $this->db->escape_str($user_id);
+        $user_pw = $this->db->escape_str($user_pw);
+        
         $where = "user_id = '" . $user_id . "'";
-       
         $where .= " AND user_pw = '" . $user_pw . "'";
         
         $rows = $this->user_m->list($where, "");

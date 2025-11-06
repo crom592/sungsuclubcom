@@ -9,6 +9,7 @@ class Board extends CI_Controller {
     {
         parent::__construct();
         session_start();
+        $this->load->database();
         $this->load->model("board_m");
     }
 
@@ -44,7 +45,8 @@ class Board extends CI_Controller {
 
         if(!$_POST['board_no']) {
 
-             $code = $_POST['code'];
+             // SQL Injection 방지: code 이스케이핑
+             $code = $this->db->escape_str($_POST['code']);
 
 
             $rows = $this->board_m->codeLevel(" code='$code'");
@@ -77,7 +79,11 @@ class Board extends CI_Controller {
         } else {
             $code = $_POST['code'];
 
-            $board_no = $_POST['board_no'];
+            // SQL Injection 방지: board_no를 정수로 변환
+            $board_no = intval($_POST['board_no']);
+            if($board_no <= 0) {
+                alert('유효한 게시글 번호가 아닙니다');
+            }
 
             $where = "bt.no=$board_no";
             $rows = $this->board_m->view($where);

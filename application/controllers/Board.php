@@ -274,7 +274,11 @@ class Board extends CI_Controller {
                 $oldFileCheckArray[$i] = $_POST['old_file_check_' . $i];
             }
 
-            $board_no = $_POST['fk_board_no'];
+            // SQL Injection 방지: board_no를 정수로 변환
+            $board_no = intval($_POST['fk_board_no']);
+            if($board_no <= 0) {
+                alert('유효한 게시글 번호가 아닙니다');
+            }
             $where = "no=$board_no";
 
             $updateData = array(

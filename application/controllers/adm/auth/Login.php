@@ -7,6 +7,7 @@ class Login extends CI_Controller {
     {
         parent::__construct();
         session_start();
+        $this->load->database();
         $this->load->model("user_m");
     }
 
@@ -26,8 +27,11 @@ class Login extends CI_Controller {
         $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : '';
         $user_pw = isset($_POST['user_pw']) ? $_POST['user_pw'] : '';
 
-        $where = "tu.user_id = '" . $this->delSpecialText($user_id) . "'";
- 
+        // SQL Injection 방지: 완전한 이스케이핑 적용
+        $user_id = $this->db->escape_str($this->delSpecialText($user_id));
+        $user_pw = $this->db->escape_str($user_pw);
+        
+        $where = "tu.user_id = '" . $user_id . "'";
         $where .= " AND tu.user_pwd = '" . $user_pw . "'";
         $where .= " AND tu.user_type=9";
         //echo $where;exit;
@@ -48,7 +52,7 @@ class Login extends CI_Controller {
             );
             $this->session->set_userdata($sessionArray);*/
 
-            $where = "user_id = '" . $this->delSpecialText($user_id) . "'";
+            $where = "user_id = '" . $user_id . "'";
             $where .= " AND user_pwd = '" . $user_pw . "'";
 
             $updateData = array('last_login_date'=>date('YmdHis'),'last_login_ip'=>$_SERVER["REMOTE_ADDR"]);
