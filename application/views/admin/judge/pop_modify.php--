@@ -1,0 +1,128 @@
+<? include_once $_SERVER['DOCUMENT_ROOT']."/admin/include/include.header.php"; ?>
+<body class="popw">
+	<ul class="top">
+    	<li class="name">백구성</li>
+        <li class="info"><i class="i-flag"></i> 한국의류학회 교수</li>
+    </ul>
+    <div class="con">
+        <!--Contents-->
+        <div class="join_wrap">
+            
+          <!--Join input-->
+          <div class="pa2">
+            <div class="input_tit">인적정보 <!-- <u>필수입력사항</u> --></div>
+            <table class="td1 mb50">
+              <tbody>
+                <tr>
+                  <th><span class="tt_r">*</span> 아이디</th>
+                  <td><input class="ipw ipw1" type="text"> <span class="btn btn1">중복확인</span></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 비밀번호</th>
+                  <td><input class="ipw ipw1" type="password">
+                    <span class="tt">비밀번호는 6~20자의 최소 1개의 숫자, 영문자를 포함</span></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 비밀번호 확인</th>
+                  <td><input class="ipw ipw1" type="password"></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 이메일</th>
+                  <td><input class="ipw ipw1" type="text"> @ <input class="ipw ipw1" type="text"> <select class="ipw ipw1">
+                      <option value="">직접입력</option>
+                      <option value="">naver.com</option>
+                      <option value="">daum.net</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 성명</th>
+                  <td>
+                  <ul class="name">
+                    <li><b><span class="tt_r">*</span> 한글</b> <input class="ipw ipw3" type="text"></li>
+                    <li><b>한자</b> <input class="ipw ipw3" type="text"></li>
+                    <li><b><span class="tt_r">*</span> 영문</b> <input class="ipw ipw3" type="text"> First Name (이름)  &nbsp; <input class="ipw ipw3" type="text"> Last Name (성)</li>
+                  </ul>                 
+                   </td>
+                </tr>
+				<tr>
+                  <th><span class="tt_r">*</span> 성별</th>
+                  <td><ul class="radio">
+                      <li><input type="radio" checked="checked"> 남자</li>
+                      <li><input type="radio"> 여자</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 휴대폰</th>
+                  <td><select class="ipw ipw1">
+                      <option value="">선택</option>
+                      <option value="">010</option>
+					  <option value="">011</option>
+                      <option value="">016</option>
+					  <option value="">019</option>
+                    </select> <input class="ipw ipw3" type="text"> 
+                    <input class="ipw ipw3" type="text"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--//Join input-->
+          
+          <!--Join input-->
+          <div class="pa2">
+            <div class="input_tit">연구분야 <!-- <u>필수입력사항</u> --></div>
+            <table class="td1">
+              <tbody>
+                <tr>
+                  <th><span class="tt_r">*</span> 연구분야</th>
+                  <td><select class="ipw ipw1">
+                      <option value="">패션디자인</option>
+                      <option value="">패션마케팅</option>
+                      <option value="">의류소재시스템</option>
+                      <option value="">의류설계생산</option>
+                      <option value="">한국아시아의복</option>
+                      <option value="">기타</option>
+                    </select></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--//Join input-->
+          <!--Join input-->
+          <div class="pa2">
+            <div class="input_tit">직장정보 <!-- <u>필수입력사항</u> --></div>
+            <table class="td1">
+              <tbody>
+                <tr>
+                  <th><span class="tt_r">*</span> 직장정보</th>
+                  <td><select class="ipw ipw1">
+                      <option value="">대학교</option>
+                      <option value="">연구소</option>
+                      <option value="">관련직종</option>
+                      <option value="">일반회사</option>
+                      <option value="">기타</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 소속기관명</th>
+                  <td><input class="ipw ipw1" type="text"></td>
+                </tr>
+                <tr>
+                  <th><span class="tt_r">*</span> 직위</th>
+                  <td><input class="ipw ipw1" type="text"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--//Join input-->
+          
+          
+          
+        
+          <div class="btn_wrap"> 
+              <a class="btn btn1 cc">심사위원해제</a> <a class="btn btn1 cc">수정</a> <a class="btn btn1 cc">목록</a>
+          </div>
+        </div>
+        <!--Contents-->
+    </div>
+</body>
+</html>
