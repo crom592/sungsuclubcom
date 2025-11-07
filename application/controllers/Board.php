@@ -9,16 +9,8 @@ class Board extends CI_Controller {
     {
         parent::__construct();
         session_start();
-        $this->load->database();
-        $this->load->library('security_lib');
-        $this->security = $this->security_lib;
         $this->load->model("board_m");
         $this->load->model("boardFile_m");
-        $this->load->model("boardComment_m");
-        $this->load->model("utube_m");
-        $this->load->model("symposium_m");
-        $this->load->model("user_m");
-        $this->yield = FALSE;
     }
 
     ## 게시판 리스트
@@ -282,11 +274,7 @@ class Board extends CI_Controller {
                 $oldFileCheckArray[$i] = $_POST['old_file_check_' . $i];
             }
 
-            // Security_lib를 사용한 입력값 검증
-            $board_no = $this->security->validate_int($_POST['fk_board_no']);
-            if($board_no === false) {
-                alert('유효한 게시글 번호가 아닙니다');
-            }
+            $board_no = $_POST['fk_board_no'];
             $where = "no=$board_no";
 
             $updateData = array(
