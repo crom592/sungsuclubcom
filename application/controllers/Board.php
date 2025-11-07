@@ -9,6 +9,7 @@ class Board extends CI_Controller {
     {
         parent::__construct();
         session_start();
+        $this->load->database();
         $this->load->model("board_m");
         $this->load->model("boardFile_m");
     }
@@ -24,10 +25,10 @@ class Board extends CI_Controller {
 
         $number_per_page = $_GET['number_per_page']?$_GET['number_per_page'] : PAGING_DATA_COUNT;
 
-
+        // $where 변수 초기화
+        $where = "1=1";
 
         if($get['searchText1']) $where.= " and ".$get['searchType1']." like '%".$get['searchText1']."%'";
-
 
         $totalRows = $this->board_m->totalCount($where);
         $data = pagingSet($totalRows, $number_per_page, $_GET['page']);
@@ -53,7 +54,8 @@ class Board extends CI_Controller {
 
         $number_per_page = $_GET['number_per_page']?$_GET['number_per_page'] : PAGING_DATA_COUNT;
 
-        $code = $_GET['code'];
+        // SQL Injection 방지: code 파라미터 이스케이핑
+        $code = $this->db->escape_str($_GET['code']);
 
         // PageNum 설정 (메뉴 선택 상태 표시용)
         if($code=='corner') {
