@@ -41,7 +41,6 @@ include_once $_SERVER['DOCUMENT_ROOT']."/include/include._header.php"; ?>
         <dl>
             <dt><b>03.</b>특별 교육 1주 기숙 과정 (330만원) 안내</dt>
             <ul class="list1">
-                <li>장성수 소장 및 임훈택 조교와 함께 1주 교육을 받습니다.</li>
                 <li>1년 동안 무료방송을 청취할 수 있습니다.</li>
                 <li>식사는 교육장에 점심을 제공하고 아침 저녁은 별도 식사를 합니다.</li>
                 <li>교육은 월요일 9시부터 금요일 17시까지 교육 커리큘럼에 의하여 진행합니다.</li>
