@@ -23,7 +23,7 @@ function sessionChk($target=1) {
 }
 function adminChk() {
     if($_SESSION['__SS_USER_TYPE__']<9) {
-        alert('관리자 로그인을 해주세요', '/admin');
+        alert('관리자 로그인을 해주세요', '/secure-admin');
     }
 }
 function makeDate($date) {

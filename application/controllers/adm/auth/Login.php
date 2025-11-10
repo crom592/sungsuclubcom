@@ -14,7 +14,7 @@ class Login extends CI_Controller {
     ## 로그인 화면
     public function index()
     {
-        $this->load->view('auth/login');
+        $this->load->view('admin/index');
     }
 
     public function delSpecialText($str) {
@@ -65,8 +65,8 @@ class Login extends CI_Controller {
             $_SESSION['__SS_USER_NAME__'] = $rows[0]['user_name'];
             $_SESSION['__SS_USER_TYPE__'] = $rows[0]['user_type'];
 
-   
-            alert("로그인 되었습니다", "/adm/member/user");
+            // Admin URL 변경: /adm -> /secure-admin
+            alert("로그인 되었습니다", "/secure-admin/member/user");
            
 
             

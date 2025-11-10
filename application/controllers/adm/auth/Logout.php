@@ -9,12 +9,13 @@ class Logout extends CI_Controller {
         session_start();
     }
 
-    ## 로그인 화면
+    ## 로그아웃 처리
     public function index()
     {
         //$this->session->sess_destroy();
         session_destroy();
-        echo "<script>alert('로그아웃 되었습니다');parent.location.href='/admin'</script>";
-        //alert("로그아웃 되었습니다", "/admin");
+        // Admin URL 변경: /admin -> /secure-admin
+        echo "<script>alert('로그아웃 되었습니다');parent.location.href='/secure-admin'</script>";
+        //alert("로그아웃 되었습니다", "/secure-admin");
     }
 }

@@ -18,11 +18,10 @@ class User extends CI_Controller {
   
     }
 
-    ## 회원 리스트 화면
+    ## 회원 리스트 화면 (프레임 구조)
 	public function index()
 	{
-        $data['frame_url'] = "/adm/member/user/list";
-
+        $data['frame_url'] = "/secure-admin/member/user/list";
         $this->load->view('admin/frame_index', $data);
 	}
 
