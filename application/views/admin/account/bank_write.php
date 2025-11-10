@@ -53,7 +53,7 @@
     
                 if(data==1) {
                   alert("추가되었습니다")
-                  window.location.href="/secure-admin/account/bank";
+                  window.location.href="/adm/account/bank";
                 } else if(data==2) {
                   alert("삭제되었습니다")
                 } else {

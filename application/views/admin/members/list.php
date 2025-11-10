@@ -1,4 +1,3 @@
-<?php include_once APPPATH."views/admin/include/header.php"; ?>
 <body class="ad_in">
 <?
 foreach($user_type_list as $type):
@@ -8,7 +7,7 @@ endforeach;
 <h2 class="tit1">회원목록<u>회원관리를 할 수 있습니다.</u></h2>
 <div class="board_list_wrap">
     <!--Search-->
-    <form name="search_frm" id="search_frm" method="GET" action="/secure-admin/member/user/list">
+    <form name="search_frm" id="search_frm" method="GET" action="/adm/member/user/list">
     <input type="hidden" name="user_gubun" value="<?=$_GET['user_gubun']?>">
     <input type="hidden" name="sort_by" id="sort_by" value="<?=$_GET['sort_by']?>">
     <input type="hidden" name="page" id="page" value="<?=$_GET['page']?>">

@@ -53,24 +53,3 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-// Admin URL 변경 (보안 강화) - 2025.11.10
-// 새로운 Admin URL: /secure-admin/ (기존: /adm/)
-$route['secure-admin'] = 'adm/auth/login';
-$route['secure-admin/index/frame'] = 'adm/index/frame';
-$route['secure-admin/top'] = 'adm/index/top';
-$route['secure-admin/menu'] = 'adm/index/menu';
-$route['secure-admin/auth/login'] = 'adm/auth/login';
-$route['secure-admin/auth/login/check'] = 'adm/auth/login/check';
-$route['secure-admin/auth/logout'] = 'adm/auth/logout';
-$route['secure-admin/member/user'] = 'adm/member/user';
-$route['secure-admin/member/user/list'] = 'adm/member/user/list';
-$route['secure-admin/(:any)/(:any)/(:any)'] = 'adm/$1/$2/$3';
-$route['secure-admin/(:any)/(:any)'] = 'adm/$1/$2';
-$route['secure-admin/(:any)'] = 'adm/$1';
-
-// 기존 Admin 경로 차단 (보안)
-$route['admin'] = 'welcome/index';
-$route['admin/(:any)'] = 'welcome/index';
-$route['adm'] = 'welcome/index';
-$route['adm/(:any)'] = 'welcome/index';
-
