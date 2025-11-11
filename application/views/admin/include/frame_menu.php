@@ -12,13 +12,7 @@ $(document).ready(function(){
 <base target="detail">
     <!--Leftmenu-->
     <div id="leftm">
-        <div class="s_menu" force="10"> <a>동영상</a> </div>
-        <div class="ss_menu" id="smenu10">
-            <ul>
-                <li><a href="#" target="detail">생방송 관리</a></li>
-                <li><a href="/adm/vod/list?code=vod" target="detail">동영상 관리</a></li>
-            </ul>
-        </div>
+        <div class="s_menu"> <a href="/adm/vod/list?code=vod" target="detail">동영상 관리</a> </div>
         <div class="s_menu" force="30"> <a>시황투자전략</a> </div>
         <div class="ss_menu" id="smenu30">
             <ul>

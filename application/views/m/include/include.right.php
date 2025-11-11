@@ -53,7 +53,9 @@
     <div class="s_menu">
     <ul>
         <li><a href="/board/list?code=communication">성수클럽 소통의 장</a></li>
+        <?if($_GET['code'] != 'communication'):?>
         <li><a href="/board/list?code=notice">공지사항</a></li>
+        <?endif;?>
     </ul>  
     </div>
     

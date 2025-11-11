@@ -46,10 +46,12 @@ include_once APPPATH."views/m/include/include._header.php"; ?>
             <i class="new i-new"></i>
             <?}?>
             </li>
+            <?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
             <li class="bl_info">
                 <span class="bl_date"><?=date('Y.m.d',strtotime($value['reg_date']))?></span>
                <!--  <span class="bl_coun"><i class="i-eye"></i><?=$value['view_count']?></span> -->
             </li>
+            <?endif;?>
         </ul>
         <?
         $num--;

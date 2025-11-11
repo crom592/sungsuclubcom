@@ -13,7 +13,9 @@
 
 <? } else if($PageNum == "3") {?>
 <li><a href="/board/list?code=communication">성수클럽 소통의 장</a></li>
+<?if($_GET['code'] != 'communication'):?>
 <li><a href="/board/list?code=notice">공지사항</a></li>
+<?endif;?>
 
 <? } else if($PageNum == "6") {?>
 <li><a href="/board/list?code=review">교육생 후기</a></li>

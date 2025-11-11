@@ -10,7 +10,7 @@
             <?if($_SESSION['__SS_USER_NO__']):?>
             <li><a href="/member/logout">로그아웃</a></li>
             <li><a href="/member/mypage">회원정보수정</a></li>
-            <li><a href="javascript:windowOpen('schedule_run', '/live/schedule_run', 437, 357, '');void(0);">송도에셋 생방송</a></li>
+            <li><a href="javascript:windowOpen('schedule_run', '/live/schedule_run', 437, 357, '');void(0);">성수클럽 생방송</a></li>
             <a href="" class="ar"><i class="i-angle-down-min"></i></a>
             <li class="welcome"><b><?=$_SESSION['__SS_USER_NICKNAME__']?></b> 회원님 환영합니다. 회원님의 대화방 종료일은 <b><?=$_SESSION['__SS_USER_END_DT__']?></b> 입니다.</li> 
             <!--//After Login-->

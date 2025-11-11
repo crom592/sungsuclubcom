@@ -6,7 +6,9 @@ include_once APPPATH."views/include/include._header.php"; ?>
     <div class="board_view">
     	<ul class="bw_top">
         	<li class="bw_subject"><?=$view[0]['title']?></li>
+            <?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
             <li class="bw_date"><span class="date"><i class="i-calendar-check"></i><?=date('Y-m-d', strtotime($view[0]['b_reg_date']))?></span><!-- <span class="count"><i class="i-eye"></i><?=$view[0]['view_count']?></span> --></li>
+            <?endif;?>
         </ul>
         <div class="bw_name"><i class="i-user"></i><?=$view[0]['user_type']==9?'성수클럽':$view[0]['b_user_name']?></div>
  
@@ -28,6 +30,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
     <!--//View Info-->  
     
     <!--View Comment-->
+    <?if($_GET['code'] != 'communication'):?>
     <div class="comment_wrap">
         <?foreach($view as $val):
             if($val['comment']):
@@ -52,6 +55,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
         <?endif;?>
         </form>
     </div>
+    <?endif;?>
     <!--//View Comment-->
     <div class="btn_wrap"> 
   

@@ -16,7 +16,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
         <li class="bs_in"><input type="text" id="searchText1" name="searchText1" value='<?=$_GET['searchText1']?>' placeholder=" 검색어를 입력하세요" alt="검색어 입력" ></li>
         <li class="bs_btn"><span class="btn" title="검색하기" onclick="search_submit()"><i class="i-search"></i></span></li>
     </ul>
-    <?if($_SESSION['__SS_USER_TYPE__']>=$write):?>
+    <?if($_SESSION['__SS_USER_TYPE__']>=$write && $_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
     <div class="btn_wrap"> 
         <a href="/board/create?code=<?=$_GET['code']?>" class="btn btn1 rr">글쓰기</a> 
     </div>
@@ -29,7 +29,9 @@ include_once APPPATH."views/include/include._header.php"; ?>
         <th>번호</th>
         <th>제목</th>
         <th>작성자</th>
+        <?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
         <th>등록일</th>
+        <?endif;?>
         <!-- <th>조회수</th> -->
       </tr>
     </thead>
@@ -51,7 +53,9 @@ include_once APPPATH."views/include/include._header.php"; ?>
                 <?}?>
             </td>
             <td class="bl_name">성수클럽</td>
+            <?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
             <td class="bl_date"><?=date('Y-m-d',strtotime($value['reg_date']))?></td>
+            <?endif;?>
             <!-- <td class="bl_coun"><?=$value['view_count']?></td> -->
         </tr>
         <?endforeach;?>
@@ -77,7 +81,9 @@ include_once APPPATH."views/include/include._header.php"; ?>
                 <?}?>
             </td>
             <td class="bl_name"><?=$value['user_type']==9?'성수클럽':$value['user_nickname']?></td>
+            <?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
             <td class="bl_date"><?=date('Y-m-d',strtotime($value['reg_date']))?></td>
+            <?endif;?>
             <!-- <td class="bl_coun"><?=$value['view_count']?></td> -->
         </tr>
         <?
@@ -114,7 +120,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
             </div>
             <ul class="g_con">
                 <li class="g_subject"><a href="view?no=<?=$value['no']?>&<?=$param?>&this_page=<?=$_GET['page']?>"><?=$value['title']?></a></li>
-                <li class="g_name"><i class="i-user"></i> <?=$value['user_type']==9?'성수클럽':$value['user_nickname']?></li><li class="g_date num"><?=date('Y-m-d',strtotime($value['reg_date']))?></li>
+                <li class="g_name"><i class="i-user"></i> <?=$value['user_type']==9?'성수클럽':$value['user_nickname']?></li><?if($_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?><li class="g_date num"><?=date('Y-m-d',strtotime($value['reg_date']))?></li><?endif;?>
                 <li class="g_count num"><i class="i-eye"></i><?=$value['view_count']?></li>
             </ul>           
         </div>
@@ -130,7 +136,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
         <?php } ?>
 
     </ul> 
-    <?if($_SESSION['__SS_USER_TYPE__']>=$write):?>
+    <?if($_SESSION['__SS_USER_TYPE__']>=$write && $_GET['code'] != 'corner' && $_GET['code'] != 'communication'):?>
     <div class="btn_wrap"> 
         <a href="/board/create?code=<?=$_GET['code']?>" class="btn btn1 rr">글쓰기</a> 
     </div>

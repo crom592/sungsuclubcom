@@ -82,7 +82,7 @@ include_once APPPATH."views/m/include/include._header.php"; ?>
 
                     
                 ?>
-                <li><a href="/board/view?no=<?=$no?>&code=corner"><span class="tit"><?=$n['title']?></span><span class="date"><?=$reg_date?></span></a></li>
+                <li><a href="/board/view?no=<?=$no?>&code=corner"><span class="tit"><?=$n['title']?></span></a></li>
                
                 <?endforeach;?>
                 </ul>

@@ -18,7 +18,9 @@
 <? } else if($PageNum == "3") {?>
 <ul class="sub_tab">
 <li class="<?=$SubNum == '1' ? 'on' : '' ?>"><a href="/board/list?code=communication">소통의 장</a></li>
+<?if($_GET['code'] != 'communication'):?>
 <li class="<?=$SubNum == '2' ? 'on' : '' ?>"><a href="/board/list?code=notice">공지사항</a></li>
+<?endif;?>
 </ul>
 
 <? } else if($PageNum == "6") {?>

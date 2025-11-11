@@ -14,7 +14,7 @@
                     <div class="pic"><span class="num" onclick="windowOpen('schedule_run', '/live/schedule_run', 800, 600, '');"><i class="i-group"></i> <?=$live['2']?$live['2']:'방송전';?></span><a  href="javascript:windowOpen('schedule_run', '/live/schedule_run', 800, 600, '');void(0);"><img src="images/main/1_01.jpg"></a></div>
                     <ul class="profile">
                         <h4 class="tit">코스피 200선물옵션 방송 </h4><!--최대 6줄까지만-->
-                        <li>장성수 소장, 임훈택 연구원 및 정실장 채팅</li>
+                        <li>장성수 소장, 정실장 채팅</li>
                         <li>옵션비문에 의한  장 시작 전 전일 시장과 야간시장분석 </li>
                         <li>당일 매매 전략 및 대응 안내</li>
                         <li>졸업생 재교육 및 신규 교육안내 정실장 010-5066-9200</li>
@@ -76,7 +76,6 @@
                         <?endif;?>
                         <ul>
                             <li class="tit"><?=$n['title']?></li>
-                            <li class="nums"><?=$reg_date?></li>
                             <li class="name"><i class="i-profile"></i> <?=$n['user_type']==9?'성수클럽':$n['b_user_name']?></li>
                         </ul>
                     </a></li>
@@ -99,7 +98,6 @@
                         <div class="con">
                             <b><?=$vod[0]['vod_title']?> </b>
                             <p><?=$vod[0]['vod_content']?></p>
-                            <u class="nums"><?=date("Y.m.d", strtotime($vod[0]['reg_date']));?></u>
                         </div>
                     </div>
                     <?endif;?>
@@ -119,7 +117,7 @@
 
                             
                         ?>
-                        <li><a href="javascript:movieopen(<?=$no?>)"><p><?=$n['vod_title']?></p><u class="nums"><?=$reg_date?></u></a></li>
+                        <li><a href="javascript:movieopen(<?=$no?>)"><p><?=$n['vod_title']?></p></a></li>
                        
                         <?endforeach;?>
                     </ul>                

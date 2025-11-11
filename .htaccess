@@ -1,14 +1,32 @@
 
 <Limit GET HEAD POST>
-order allow,deny
-allow from 121.254.129.180
-allow from 112.150.207.89
-allow from 220.86.111.131
+# order allow,deny
+# allow from 121.254.129.180
+# allow from 112.150.207.89
+# allow from 220.86.111.131
+# allow from 211.241.126.9
+# allow from 183.109.149.186
 </LIMIT>
 
+# HTTPS redirect
 <IfModule mod_rewrite.c>
  RewriteEngine On
  RewriteBase /
+ 
+ # Force HTTPS
+ RewriteCond %{HTTPS} off
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ 
+ # Block admin access for unauthorized IPs
+ RewriteCond %{REQUEST_URI} ^/(admin|adm) [NC]
+ RewriteCond %{REMOTE_ADDR} !^121\.254\.129\.180$
+ RewriteCond %{REMOTE_ADDR} !^112\.150\.207\.89$
+ RewriteCond %{REMOTE_ADDR} !^220\.86\.111\.131$
+ RewriteCond %{REMOTE_ADDR} !^211\.241\.126\.9$
+ RewriteCond %{REMOTE_ADDR} !^183\.109\.149\.186$
+ RewriteRule ^(.*)$ - [F,L]
+ 
+ # Standard CodeIgniter routing
  RewriteCond $1 !^(index\.php|images|captcha|data|include|uploads|robots\.txt)
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d

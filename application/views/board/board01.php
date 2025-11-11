@@ -83,7 +83,7 @@ include_once APPPATH."views/include/include._header.php"; ?>
         <?php } ?>
 
     </ul> 
-    <?if($_SESSION['__SS_USER_TYPE__']>=$write):?>
+    <?if($_SESSION['__SS_USER_TYPE__']>=$write && $_GET['code'] != 'corner'):?>
     <div class="btn_wrap"> 
         <a href="/board/create?code=<?=$_GET['code']?>" class="btn btn1 rr">글쓰기</a> 
     </div>
