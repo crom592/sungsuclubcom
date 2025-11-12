@@ -6,7 +6,7 @@ include_once APPPATH."views/m/include/include._header.php"; ?>
     <div class="mc1">
         <div class="cons">
             <div class="mc1_">
-                <h3 class="tit"><u><i class="i-tv"></i> 방송</u>국내 주야간 선물옵션</h3>
+                <h3 class="tit"><u><i class="i-tv"></i> 방송</u>선물 코스피 200옵션</h3>
                 <div class="pic"><span class="num"><i class="i-group"></i> <?=$live['2']?$live['2']:'방송전';?></span>
 
                 <a href="javascript:windowOpen('schedule_run', '/live/schedule_run', '', '', '');void(0);"><img src="/images/main/1_01.jpg"></a>
@@ -14,7 +14,7 @@ include_once APPPATH."views/m/include/include._header.php"; ?>
             </div>
             </div>
             <div class="mc1_">
-                <h3 class="tit"><u><i class="i-tv"></i> 방송</u>주간 위클리 옵션</h3>
+                <h3 class="tit"><u><i class="i-tv"></i> 방송</u>선물 위클리 옵션</h3>
                 <div class="pic"><span class="num"><i class="i-group"></i> <?=$live['3']?$live['3']:'방송전';?></span>
 
                 <a  href="javascript:windowOpen('schedule_run2', '/live/schedule_run2', '', '', '');void(0);"><img src="/images/main/1_02.jpg"></a>
