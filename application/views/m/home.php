@@ -24,7 +24,7 @@ include_once APPPATH."views/m/include/include._header.php"; ?>
         <!--유튜브 배너-->
         <div class="cons mc1_2 m_bbs">
         	<dt class="tits">유튜브<!--a href="/utube/list" class="link"><i class="i-plus-min"></i></a--></dt>
-            <a href="https://www.youtube.com/@성수클럽장성수소장" class="btn" target="_blank"><img src="/m/images/main/1_yt.png?111"></a>
+            <a href="https://www.youtube.com/@선물옵션성수클럽" class="btn" target="_blank"><img src="/m/images/main/1_yt.png?111"></a>
         </div>  
 
     </div>

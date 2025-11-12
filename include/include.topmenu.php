@@ -4,7 +4,7 @@
         	<li class="sl1"><a href="/press/press01.php">장성수 소장의 보도자료</a></li>
             <li class="sl2"><a href="/guide/guide01.php">교육 및 회원안내</a></li>
         </ul>
-        <div id="logo"><a href="/"><img src="/images/common/logo.png" title="송도에셋" /></a></div>
+        <div id="logo"><a href="/"><img src="/images/common/logo.png" title="성수클럽" /></a></div>
         <ul id="spot_r">
              <!--After Login-->
             <?if($_SESSION['__SS_USER_NO__']):?>

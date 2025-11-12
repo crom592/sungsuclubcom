@@ -1,7 +1,7 @@
 <? 
 $PageNum="3";
 $SubNum="1";
-$Title="송도에셋 소통의 장";
+$Title="성수클럽 소통의 장";
 include_once $_SERVER['DOCUMENT_ROOT']."/m/include/include._header.php"; ?>
 
 <div class="board_list_wrap">

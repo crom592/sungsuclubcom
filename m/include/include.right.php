@@ -65,7 +65,6 @@
     <div class="s_menu">
     <ul>
         <li><a href="/board/list?code=corner">진서리코너</a></li>
-        <li><a href="/board/list?code=diary">운영자 Diary</a></li>
     </ul>  
     </div>
     

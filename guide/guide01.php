@@ -49,12 +49,13 @@ include_once $_SERVER['DOCUMENT_ROOT']."/include/include._header.php"; ?>
                     <li>A코스 월 ,목 저녁 7시부터 9시까지 4회 B 코스는 8회 운영합니다</li>
                     <li>방송대화방은 그대로 유지됩니다</li>
                 </ul>
-            </dl>
+            
             <ul class="bx">
-                <li><b>교육장소</b> 전북 완주군 용진읍 구억명덕로 46 교육장 1층 기숙사 2층</li>
-                <li><b>교육문의</b> 장성수 010-4159-6839</li>
-                <li><b>계좌번호</b><span class="num"> 3010-0333-46291 </span><img src="/images/guide/bank.png" /> 예금주 : 성수클럽</li>
+                <li><b>교육장소</b>전북 완주군 용진읍 구억명덕로 46 교육장 1층 기숙사 2층</li>
+                <li><b>교육문의</b>장성수 010-4159-6839</li>
+                <li><b>계좌번호</b><span class="num">3010-0333-46291 </span><img src="/images/guide/bank.png" />예금주 : 성수클럽</li>
             </ul>    
+        </dl>
     </div>
 </div>
 

@@ -29,7 +29,6 @@ include_once $_SERVER['DOCUMENT_ROOT']."/m/include/include._header.php"; ?>
             <li><b>2010</b>혼(魂)과 과학의 조합, 옵션비문 발행 </li>
             <li><b>2015</b>누적 500여명 사관교육생 배출 </li>
             <li><b>2019</b>TV 및 주요 증권사 등 전국 강연회 개최 </li>
-            <li><b>2020</b>임훈택 전문가 연구원으로 참여 </li>
             <li><b>2022</b>성수클럽 홈페이지 개편</li>
         </ul>
     </div>

@@ -33,7 +33,7 @@
 
             <div class="cons mc1_2">
             	<h3 class="tits">유튜브<!--a href="/utube/list" class="link"><i class="i-plus-min"></i></a--></h3>
-                <a href="https://www.youtube.com/@성수클럽장성수소장" class="btn" target="_blank"><img src="../../images/main/1_yt.png?111"></a>
+                <a href="https://www.youtube.com/@선물옵션성수클럽" class="btn" target="_blank"><img src="../../images/main/1_yt.png?111"></a>
             </div>
 
         </div>

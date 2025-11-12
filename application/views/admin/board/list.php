@@ -66,6 +66,7 @@ if($_GET['code']) {
  
 	<!--Search-->
     <form name="search_frm" id="search_frm" method="GET" action="/adm/board/list">
+    <input type="hidden" name="code" value="<?=$_GET['code']?>">
     <ul class="board_search">
     	<li class="bs_tit">검색어</li>
     	<li class="bs_select">
@@ -77,22 +78,26 @@ if($_GET['code']) {
             <option value="content" <?=$_GET['searchType1']=='user_name'?'selected':'';?>>성명</option>
             </select>
         </li>
-        <li class="bs_in"><input type="text"  name="searchText" value="<?=$_GET['searchText']?>" placeholder="검색어를 입력하세요" class="ipw"></li>
+        <li class="bs_in"><input type="text"  name="searchText1" value="<?=$_GET['searchText1']?>" placeholder="검색어를 입력하세요" class="ipw"></li>
         <li class="bs_btn"><a href="javascript:search_sumbit()" class="btn btn1">검색하기</a></li>
     </ul>
     </form>
     <!--//Search-->
 
 	<!--List-->
+    <?if($_GET['code'] != 'corner'):?>
     <div class="btn_wrap"> 
         <a href="#" class="btn btn1 rr" onclick="javascript:del()">선택삭제</a> 
         <a href="write?no=&code=<?=$_GET['code']?>&page=<?=$_GET['page']?>" class="btn btn1 rr">글쓰기</a> 
     </div>
+    <?endif;?>
     <form>
 	<table class="board_list">
     <thead>
       <tr>
+        <?if($_GET['code'] != 'corner'):?>
         <th><input type="checkbox" name="toggle_check" value="1" onclick="toggle_checkbox(this.form['no[]'])"></th>
+        <?endif;?>
         <th>번호</th>
         <!-- <th>이미지</th> -->
         <th>제목</th>
@@ -108,7 +113,9 @@ if($_GET['code']) {
             $num = $totalRows - ($sPoint + $index);
           foreach($list as $value):?>
         <tr>
+            <?if($_GET['code'] != 'corner'):?>
             <td class="bl_check"><input type="checkbox" name="no[]" value="<?=$value['no']?>" /></td>
+            <?endif;?>
             <td class="bl_num"><?=$num?></td>
             <!-- <td class="bl_pic"><img src="/images/board/pic1.png" ><!--첨부파일 이미지가 있을경우 미리보기 나옴--><!--/td> -->
             <td class="bl_subject"><a href="view?page=<?=$_GET['page']?>&no=<?=$value['no']?>&code=<?=$_GET['code']?>"><?=$value['title']?></a></td>
@@ -136,10 +143,12 @@ if($_GET['code']) {
 
     </ul> 
        
+    <?if($_GET['code'] != 'corner'):?>
     <div class="btn_wrap"> 
         <a href="#" class="btn btn1 rr" onclick="javascript:del()">선택삭제</a> 
         <a href="write?no=&code=<?=$_GET['code']?>&page=<?=$_GET['page']?>" class="btn btn1 rr">글쓰기</a> 
     </div>
+    <?endif;?>
 </div>
 <script>
     $(function(){

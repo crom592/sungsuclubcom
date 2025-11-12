@@ -33,8 +33,6 @@ class Board extends CI_Controller {
         $totalRows = $this->board_m->totalCount($where);
         $data = pagingSet($totalRows, $number_per_page, $_GET['page']);
 
-        print_r($totalRows);exit;
-
         $rows = $this->board_m->list($where, $data['sPoint'], $number_per_page, '1');
 
         $data['list'] = $rows;

@@ -25,7 +25,6 @@
 
 <? } else if($PageNum == "6") {?>
 <ul class="sub_tab">
-<?if($_SESSION['__SS_USER_TYPE__']==9):?><li class="<?=$SubNum == '2' ? 'on' : '' ?>"><a href="/board/list?code=diary">운영자 Diary</a></li><?endif;?>
 </ul>
 
 <? } else if($PageNum == "8") {?>

@@ -24,7 +24,6 @@
 <? } else if($PageNum == "6") {?>
 <ul class="sub_tab">
 <li class="<?=$SubNum == '1' ? 'on' : '' ?>"><a href="/board/list?code=corner">진서리코너</a></li>
-<li class="<?=$SubNum == '2' ? 'on' : '' ?>"><a href="/board/list?code=diary">운영자 Diary</a></li>
 </ul>
 
 <? } else if($PageNum == "8") {?>
