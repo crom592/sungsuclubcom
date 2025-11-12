@@ -6,6 +6,7 @@
 # allow from 220.86.111.131
 # allow from 211.241.126.9
 # allow from 183.109.149.186
+# allow from 61.247.116.119
 </LIMIT>
 
 # HTTPS redirect
@@ -24,6 +25,7 @@
  RewriteCond %{REMOTE_ADDR} !^220\.86\.111\.131$
  RewriteCond %{REMOTE_ADDR} !^211\.241\.126\.9$
  RewriteCond %{REMOTE_ADDR} !^183\.109\.149\.186$
+ RewriteCond %{REMOTE_ADDR} !^61\.247\.116\.119$
  RewriteRule ^(.*)$ - [F,L]
  
  # Standard CodeIgniter routing
